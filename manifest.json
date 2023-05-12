@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PLscreenshot",
+  "description": "screenshot prairielearn assignments",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://us.prairielearn.com/pl/*"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ],
+  "permissions": ["downloads", "activeTab", "tabs", "scripting"],
+  "action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "pageAction/index.html"
+  },
+  "background": {
+    "scripts": ["background-script.js"],
+    "type": "module"
+  }
+}
